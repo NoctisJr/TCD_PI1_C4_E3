@@ -1,0 +1,33 @@
+name: Auto-Label by User
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  auto-label:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Assign Backend label
+      if: github.event.pull_request.user.login == 'Jsalvar124'
+      run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - Backend"
+
+    - name: Assign DDBB label
+      if: github.event.pull_request.user.login == 'Jsalvar124'
+      run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - DDBB"
+
+    - name: Assign FrontEnd label
+      if: github.event.pull_request.user.login == 'usuario-frontend'
+      run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - FrontEnd"
+
+    - name: Assign Infra label
+      if: github.event.pull_request.user.login == 'NoctisJr'
+      run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - Infra"
+
+    - name: Assign Testing label
+      if: github.event.pull_request.user.login == 'usuario-testing'
+      run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - Testing"
