@@ -12,22 +12,37 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Set up GitHub CLI
+      run: |
+        sudo apt-get install gh
+        echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
     - name: Assign Backend label
       if: github.event.pull_request.user.login == 'Jsalvar124'
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - Backend"
 
     - name: Assign DDBB label
       if: github.event.pull_request.user.login == 'Jsalvar124'
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - DDBB"
 
     - name: Assign FrontEnd label
       if: github.event.pull_request.user.login == 'usuario-frontend'
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - FrontEnd"
 
     - name: Assign Infra label
       if: github.event.pull_request.user.login == 'NoctisJr'
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - Infra"
 
     - name: Assign Testing label
       if: github.event.pull_request.user.login == 'usuario-testing'
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: gh pr edit ${{ github.event.pull_request.number }} --add-label "TL - Testing"
