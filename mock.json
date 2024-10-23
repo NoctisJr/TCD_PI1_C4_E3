@@ -1,0 +1,55 @@
+{
+    "placesToVisit": [
+      {
+        "city": "Paris",
+        "country": "France",
+        "description": "The city of lights, known for its art, fashion, and culture.",
+        "attractions": [
+          "Eiffel Tower",
+          "Louvre Museum",
+          "Notre-Dame Cathedral"
+        ]
+      },
+      {
+        "city": "Tokyo",
+        "country": "Japan",
+        "description": "A bustling metropolis blending tradition and futurism.",
+        "attractions": [
+          "Tokyo Skytree",
+          "Meiji Shrine",
+          "Shibuya Crossing"
+        ]
+      },
+      {
+        "city": "New York",
+        "country": "USA",
+        "description": "The city that never sleeps, known for its iconic skyline and vibrant culture.",
+        "attractions": [
+          "Statue of Liberty",
+          "Central Park",
+          "Times Square"
+        ]
+      },
+      {
+        "city": "Rome",
+        "country": "Italy",
+        "description": "A city rich in history and architecture, the heart of the Roman Empire.",
+        "attractions": [
+          "Colosseum",
+          "Vatican Museums",
+          "Trevi Fountain"
+        ]
+      },
+      {
+        "city": "Sydney",
+        "country": "Australia",
+        "description": "A coastal city known for its beautiful harbor and outdoor lifestyle.",
+        "attractions": [
+          "Sydney Opera House",
+          "Bondi Beach",
+          "Sydney Harbour Bridge"
+        ]
+      }
+    ]
+  }
+  
