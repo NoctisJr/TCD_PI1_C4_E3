@@ -1,0 +1,80 @@
+/* Estilo para el cuerpo de la aplicación */
+.app-body {
+  background-color: #f0f4f8; /* Color de fondo que refleja la identidad de marca */
+  min-height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo del buscador */
+.search-section {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.search-section input {
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la sección de categorías */
+.categories-section {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.categories-section ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.categories-section li {
+  background-color: #0073e6; /* Color de marca */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Estilo para la sección de recomendaciones */
+.recommendations-section {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.recommendation-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .categories-section ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .recommendations-section {
+    flex-direction: column;
+  }
+}
