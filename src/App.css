@@ -1,6 +1,6 @@
 /* Estilo para el cuerpo de la aplicación */
 .app-body {
-  background-color: #f0f4f8; /* Color de fondo que refleja la identidad de marca */
+  background-color: #966e52; /* Color de fondo que refleja la identidad de marca */
   min-height: 100vh; /* Ocupa el 100% del alto de la pantalla */
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@
 }
 
 .categories-section li {
-  background-color: #0073e6; /* Color de marca */
+  background-color: #dcaf8b; /* Color de marca */
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -59,7 +59,7 @@
 }
 
 .recommendation-item {
-  background-color: white;
+  background-color: #aca48c;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
