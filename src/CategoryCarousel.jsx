@@ -14,7 +14,7 @@ const CategoryCarousel = () => {
 
   return (
     <section className="categories-section">
-      <h2 className='title_cat'>Categorías</h2>
+      <h2 className='title_cat'>CATEGORIAS</h2>
       <div className="carousel-container">
         <button className="carousel-button left" onClick={scrollLeft}>
           &#8249;

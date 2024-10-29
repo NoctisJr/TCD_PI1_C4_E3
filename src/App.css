@@ -13,6 +13,7 @@ body, .app-body {
 }
 .title_cat{
   color:#282828;
+  text-align: left;
 }
 
 /* Search Section */
