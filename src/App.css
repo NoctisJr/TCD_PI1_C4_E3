@@ -78,9 +78,12 @@ body, .app-body {
   width: 100%;
   max-width: 1200px;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 0 0 200px;
 }
+.recommendations-title{
+  text-align: left ;
 
+}
 .recommendation-item {
   background-color: #c36e39;
   padding: 15px;
@@ -93,7 +96,7 @@ body, .app-body {
 /* Estilos Responsivos */
 
 /* Pantallas menores a 768px (tablets y móviles) */
-@media (max-width: 768px) {
+@media (max-width: 1089px) {
   .search-section {
     flex-direction: column;
     text-align: center;
@@ -121,6 +124,9 @@ body, .app-body {
 
   .recommendation-item {
     margin: 5px 0;
+  }
+  .recommendations-section {
+    padding: 0;
   }
 }
 

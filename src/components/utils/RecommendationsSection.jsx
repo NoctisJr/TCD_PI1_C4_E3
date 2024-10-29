@@ -22,7 +22,7 @@ const recommendations = [
   const RecommendationsSection = () => {
     return (
       <section className="recommendations-section">
-        <h2>Recomendaciones</h2>
+        <h2 className="recommendations-title">RECOMENDACIONES</h2>
         <div className="recommendations-list">
           {recommendations.map((rec, index) => (
             <Card
