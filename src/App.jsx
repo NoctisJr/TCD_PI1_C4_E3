@@ -2,9 +2,9 @@
 // App.jsx
 import React from 'react';
 import './App.css';
-import SearchSection from './SearchSection';
-import CategoryCarousel from './CategoryCarousel';
-import RecommendationsSection from './RecommendationsSection';
+import SearchSection from './components/utils/SearchSection'
+import CategoryCarousel from './components/utils/Carousel/CategoryCarousel';
+import RecommendationsSection from './components/utils/RecommendationsSection';
 
 const App = () => {
   return (
