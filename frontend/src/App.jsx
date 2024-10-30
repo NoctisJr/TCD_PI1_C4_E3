@@ -1,6 +1,5 @@
-import React from 'react';
 import './App.css'; // Importa el archivo de estilos CSS
-
+import TourDetail from './TourDetail.jsx';
 const App = () => {
   return (
     <div className="app-body">
@@ -26,7 +25,12 @@ const App = () => {
         <div className="recommendation-item">Producto recomendado 1</div>
         <div className="recommendation-item">Producto recomendado 2</div>
       </section>
+      <section className='"tour-detail'>
+      <TourDetail />
+      </section>
     </div>
+
+
   );
 };
 
