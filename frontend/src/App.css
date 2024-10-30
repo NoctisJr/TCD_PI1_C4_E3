@@ -1,80 +1,150 @@
-/* Estilo para el cuerpo de la aplicación */
-.app-body {
-  background-color: #f0f4f8; /* Color de fondo que refleja la identidad de marca */
-  min-height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+
+/* Estilos generales */
+body, .app-body {
+  margin: 0;
+  padding: 0;
+  background-color: #282828; /* Color de fondo principal */
+  color: #ebdfc5; /* Color de texto */
+  font-family: Arial, sans-serif;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+}
+.title_cat{
+  color:#282828;
+  text-align: left;
 }
 
-/* Estilo del buscador */
+/* Search Section */
 .search-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #ebdfc5;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.title {
+  color: #c36e39; /* Color secundario */
+  font-size: 24px;
+  margin: 0;
+}
+
+.search-input {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #653420; /* Detalles */
+  background-color: #282828;
+  color: #ebdfc5;
+}
+
+/* Categories Section */
+.categories-section {
+  background-color: #ebdfc5;
   width: 100%;
   max-width: 1200px;
   text-align: center;
+  padding: 20px 0;
 }
 
-.search-section input {
-  width: 80%;
-  padding: 12px;
-  font-size: 18px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo para la sección de categorías */
-.categories-section {
-  width: 100%;
-  max-width: 1200px;
-}
-
-.categories-section ul {
-  display: flex;
-  justify-content: space-around;
+.categories-list {
   list-style: none;
   padding: 0;
-}
-
-.categories-section li {
-  background-color: #0073e6; /* Color de marca */
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-}
-
-/* Estilo para la sección de recomendaciones */
-.recommendations-section {
-  width: 100%;
-  max-width: 1200px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 20px;
 }
 
-.recommendation-item {
-  background-color: white;
-  padding: 20px;
+.categories-list li {
+  background-color: #c36e39;
+  padding: 10px 20px;
+  color: #ebdfc5;
+  font-weight: bold;
   border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  text-align: center;
 }
 
-/* Estilos para pantallas pequeñas */
-@media (max-width: 768px) {
-  .categories-section ul {
+/* Recommendations Section */
+.recommendations-section {
+  background-color: #282828;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  padding: 20px 0 0 200px;
+}
+.recommendations-title{
+  text-align: left ;
+
+}
+.recommendation-item {
+  background-color: #c36e39;
+  padding: 15px;
+  margin: 10px;
+  color: #ebdfc5;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Estilos Responsivos */
+
+/* Pantallas menores a 768px (tablets y móviles) */
+@media (max-width: 1089px) {
+  .search-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .search-input {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .categories-list {
     flex-direction: column;
     gap: 10px;
   }
 
+  .recommendation-item {
+    margin: 5px 0;
+  }
   .recommendations-section {
-    flex-direction: column;
+    padding: 0;
+  }
+}
+
+/* Pantallas menores a 480px (móviles pequeños) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .categories-list li {
+    padding: 8px 15px;
+  }
+
+  .recommendation-item {
+    padding: 10px;
   }
 }
