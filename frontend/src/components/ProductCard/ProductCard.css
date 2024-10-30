@@ -1,0 +1,13 @@
+.product-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.product-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.product-description {
+  color: #555;
+}
