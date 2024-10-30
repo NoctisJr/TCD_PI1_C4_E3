@@ -1,5 +1,5 @@
 import './TourDetail.css';
-import mojarraImage from './assets/Img/mojarra1.jpg';
+import mojarraImage from '../assets/Img/mojarra1.jpg';
 
 function TourDetail() {
   return (

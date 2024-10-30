@@ -5,7 +5,7 @@ import './App.css';
 import SearchSection from './components/utils/SearchSection'
 import CategoryCarousel from './components/utils/Carousel/CategoryCarousel';
 import RecommendationsSection from './components/utils/RecommendationsSection';
-import TourDetail from './TourDetail';
+import TourDetail from './components/TourDetail';
 
 const App = () => {
   return (
@@ -15,7 +15,6 @@ const App = () => {
       <RecommendationsSection />
       <TourDetail />
     </div>
-
 
   );
 };
