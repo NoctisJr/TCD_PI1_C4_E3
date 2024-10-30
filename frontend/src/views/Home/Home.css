@@ -1,6 +1,6 @@
-
 /* Estilos generales */
-body, .app-body {
+body,
+.home-body {
   margin: 0;
   padding: 0;
   background-color: #282828; /* Color de fondo principal */
@@ -11,8 +11,8 @@ body, .app-body {
   flex-direction: column;
   align-items: center;
 }
-.title_cat{
-  color:#282828;
+.title_cat {
+  color: #282828;
   text-align: left;
 }
 
@@ -80,9 +80,8 @@ body, .app-body {
   text-align: center;
   padding: 20px 0 0 200px;
 }
-.recommendations-title{
-  text-align: left ;
-
+.recommendations-title {
+  text-align: left;
 }
 .recommendation-item {
   background-color: #c36e39;
