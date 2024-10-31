@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css'; // Importa el archivo de estilos CSS
+import Footer from './Footer';
 
 const App = () => {
   return (
@@ -26,7 +27,9 @@ const App = () => {
         <div className="recommendation-item">Producto recomendado 1</div>
         <div className="recommendation-item">Producto recomendado 2</div>
       </section>
+      <Footer />
     </div>
+    
   );
 };
 

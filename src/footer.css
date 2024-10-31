@@ -1,0 +1,36 @@
+footer { 
+    width: 100vw;
+    height: 15vh;
+    padding: 10px 50px; 
+    background-color: #282828;
+    color: #ebdfc5; 
+    overflow: hidden; 
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 100%; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.logo, .redes, .logo li {
+    max-height: 100%;
+}
+
+.redes {
+    display: flex;
+    list-style-type: none;
+    padding: 5px;
+    margin: 0px;
+}
+
+.facebook {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul { padding: 0px; }
+li { list-style: none; font-size: 1.2vh; } 
