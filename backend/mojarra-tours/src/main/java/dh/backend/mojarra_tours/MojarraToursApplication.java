@@ -1,13 +1,13 @@
-package com.mojarra_tours.dh;
+package dh.backend.mojarra_tours;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DhApplication {
+public class MojarraToursApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DhApplication.class, args);
+		SpringApplication.run(MojarraToursApplication.class, args);
 	}
 
 }
