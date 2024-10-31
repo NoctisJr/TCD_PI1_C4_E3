@@ -1,10 +1,20 @@
+import TourDetail from "../components/TourDetail/TourDetail";
 import Home from "../views/Home/Home";
 import NotFound from "../views/NotFount/NotFount";
+import Tours from "../views/Tours/Tours";
 
 const configRouter = [
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/tours",
+    element: <Tours />,
+  },
+  {
+    path: "/tours/:id",
+    element: <TourDetail />,
   },
   // {
   //   path: "/",

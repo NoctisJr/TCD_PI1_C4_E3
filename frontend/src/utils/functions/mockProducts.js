@@ -35,7 +35,60 @@ const mockProducts = [
     description: "Muro de escalada portátil para eventos y entrenamiento.",
     category: "Alquiler y Fabricación de Muros de Escalada"
   },
-  // Agrega más productos aquí según sea necesario
+  {
+    id: 7,
+    name: "Linterna LED de Alta Potencia",
+    description: "Linterna compacta y potente, ideal para acampar.",
+    category: "Accesorios de Camping",
+  },
+  {
+    id: 8,
+    name: "Saco de Dormir Ultra Liviano",
+    description: "Saco de dormir ligero y compacto, perfecto para trekking.",
+    category: "Equipo de Camping",
+  },
+  {
+    id: 9,
+    name: "Mochila de Senderismo 50L",
+    description: "Mochila amplia y cómoda, perfecta para excursiones largas.",
+    category: "Equipos de Camping",
+  },
+  {
+    id: 10,
+    name: "Gafas de Sol para Montañismo",
+    description: "Gafas polarizadas, esenciales para proteger tus ojos en la montaña.",
+    category: "Accesorios de Montañismo",
+  },
+  {
+    id: 11,
+    name: "Set de Utensilios de Camping",
+    description: "Utensilios compactos para cocinar en el camping.",
+    category: "Accesorios de Camping",
+  },
+  {
+    id: 12,
+    name: "Cámara de Acción Resistente",
+    description: "Captura tus aventuras con esta cámara de acción impermeable.",
+    category: "Accesorios de Aventura",
+  },
+  {
+    id: 13,
+    name: "Botiquín de Primeros Auxilios",
+    description: "Kit completo de primeros auxilios para cualquier aventura.",
+    category: "Seguridad y Salud",
+  },
+  {
+    id: 14,
+    name: "Estufa de Camping Portátil",
+    description: "Estufa ligera y eficiente para cocinar al aire libre.",
+    category: "Accesorios de Camping",
+  },
+  {
+    id: 15,
+    name: "Capa de Lluvia para Senderismo",
+    description: "Capa liviana y compacta, ideal para climas cambiantes.",
+    category: "Ropa y Calzado",
+  },
 ];
 
 export default mockProducts;

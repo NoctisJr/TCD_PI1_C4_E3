@@ -1,13 +1,62 @@
 .product-card {
-  padding: 16px;
-  border: 1px solid #ddd;
+  background-color: #ebdfc5;
   border-radius: 8px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .product-title {
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 16px;
+  margin: 12px 0 8px;
+  color: #653420;
 }
+
 .product-description {
-  color: #555;
+  font-size: 14px;
+  margin: 8px 0;
+  color: #282828;
+  flex-grow: 1;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button {
+  width: 100px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.more-info {
+  background-color: #c36e29; /* Color del botón "Saber más" */
+  color: white;
+}
+
+.reserve {
+  background-color: #653420; /* Color del botón "Reservar" */
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.9; /* Efecto al pasar el mouse */
 }
