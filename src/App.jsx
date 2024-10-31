@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css'; // Importa el archivo de estilos CSS
 import Footer from './Footer';
+import Navbar from './Navbar';
 
 const App = () => {
   return (
     <div className="app-body">
+      <Navbar />
       {/* Sección del buscador */}
       <header className="search-section">
         <h1>Buscador</h1>
