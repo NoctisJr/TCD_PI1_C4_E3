@@ -1,0 +1,45 @@
+footer { 
+    width: 90vw;
+    height: 15vh;
+    padding: 10px 50px; 
+    background-color: #282828;
+    color: #ebdfc5; 
+    overflow: hidden; 
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+    
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    max-height: 100%; 
+    gap: 10px;
+    margin: 8px; 
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+.redes {
+    display: flex;
+    list-style-type: none;
+    padding: 5px;
+    margin: 0px;
+    justify-content: center;
+}
+
+.facebook {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.redes, .logo li {max-height: 100%;}
+ul { padding: 0px; }
+li { list-style: none; font-size: 1.7vh; } 

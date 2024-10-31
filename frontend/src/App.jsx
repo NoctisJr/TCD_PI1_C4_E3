@@ -6,6 +6,7 @@ import SearchSection from './components/utils/SearchSection'
 import CategoryCarousel from './components/utils/Carousel/CategoryCarousel';
 import RecommendationsSection from './components/utils/RecommendationsSection';
 import TourDetail from './components/TourDetail';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <CategoryCarousel />
       <RecommendationsSection />
       <TourDetail />
+      <Footer />
     </div>
 
   );
