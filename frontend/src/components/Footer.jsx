@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
         
-        <ul className="foot">
+        <div className="foot">
           
           <div className="logo">
                 <ul className="redes">
@@ -19,28 +19,24 @@ const Footer = () => {
           </div>
           
           <div>
-          <li>
             <ul>
               <li>En la montaña la mojarra</li>
               <li>En la montaña la mojarra</li>
               <li>En la montaña la mojarra</li>
               <li>En la montaña la mojarra</li>
             </ul>
-          </li>
           </div>
 
           <div>
-          <li>
             <ul>
               <li>En la montaña la mojarra</li>
               <li>En la montaña la mojarra</li>
               <li>En la montaña la mojarra</li>
               <li>En la montaña la mojarra</li>
             </ul>
-          </li>
           </div>
 
-        </ul>
+        </div>
         
     </footer>
   )
