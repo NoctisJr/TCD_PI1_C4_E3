@@ -10,6 +10,7 @@
 .navbar {
     display: flex;
     position: fixed;
+    z-index: 50;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
