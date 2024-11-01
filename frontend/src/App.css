@@ -38,6 +38,7 @@ body, .app-body {
 }
 
 .search-input {
+  margin-top: 200px;
   width: 50%;
   padding: 10px;
   font-size: 16px;
