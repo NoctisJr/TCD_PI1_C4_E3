@@ -1,0 +1,7 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
