@@ -16,10 +16,10 @@ const configRouter = [
     path: "/tours/:id",
     element: <TourDetail />,
   },
-  // {
-  //   path: "/",
-  //   element: <Home />,
-  // },
+  {
+    path: "/misitio",
+    element: <Home />,
+  },
   { 
     path: "*",
     element: <NotFound />

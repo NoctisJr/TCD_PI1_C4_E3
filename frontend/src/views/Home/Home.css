@@ -6,7 +6,6 @@ body,
   background-color: #282828; /* Color de fondo principal */
   color: #ebdfc5; /* Color de texto */
   font-family: Arial, sans-serif;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +38,7 @@ body,
 }
 
 .search-input {
+  margin-top: 200px;
   width: 50%;
   padding: 10px;
   font-size: 16px;
