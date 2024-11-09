@@ -25,6 +25,6 @@ public class User {
     private String phone;
     private String grade;
     @Column(name="is_admin")
-    private Boolean isAdmin;
+    private Boolean isAdmin =false;
 
 }
