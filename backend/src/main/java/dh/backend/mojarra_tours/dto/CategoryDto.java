@@ -10,4 +10,5 @@ import lombok.*;
 public class CategoryDto {
     private Long id;
     private String name;
+    // #TODO ADD IMAGE PATH
 }

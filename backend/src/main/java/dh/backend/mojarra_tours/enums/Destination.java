@@ -6,7 +6,7 @@ public enum Destination {
     MACAGUATO("Macaguato"),
     LA_PENIA("La Peña"),
     CHICAMOCHA("Cañón del Chicamocha"),
-    SALENTO("Salento"),
+    BARICHARA("Barichara"),
     MESA_DE_LOS_SANTOS("Mesa de los Santos");
 
     private final String fullName;
