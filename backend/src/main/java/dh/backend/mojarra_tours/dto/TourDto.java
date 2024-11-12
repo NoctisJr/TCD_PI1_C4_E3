@@ -23,6 +23,5 @@ public class TourDto {
     private Day day;
     @JsonFormat(pattern = "HH:mm")
     private LocalTime schedule;
-    // #TODO ADD MAIN IMAGE PATH
-    // #TODO ADD OTHER IMAGE PATH
+
 }
