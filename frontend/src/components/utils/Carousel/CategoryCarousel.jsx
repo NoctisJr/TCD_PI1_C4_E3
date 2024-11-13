@@ -1,15 +1,16 @@
 import React, { useRef } from 'react';
 import './CategoryCarousel.css'; // Agrega un archivo CSS específico para los estilos del carrusel
+import imagen from "../../../assets/Img/mojarra1.jpg"
 
 const CategoryCarousel = () => {
   const carouselRef = useRef(null);
 
   const scrollLeft = () => {
-    carouselRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+    carouselRef.current.scrollBy({ left: -100, behavior: 'smooth' });
   };
 
   const scrollRight = () => {
-    carouselRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+    carouselRef.current.scrollBy({ left: 100, behavior: 'smooth' });
   };
 
   return (
@@ -20,12 +21,13 @@ const CategoryCarousel = () => {
           &#8249;
         </button>
         <ul className="categories-list" ref={carouselRef}>
-          <li className='escalada'>Escalada</li>
-          <li>Senderismo</li>
-          <li className='camping'>Camping</li>
-          <li>Camping</li>
-          <li>Exploración</li>
-          <li>Montañismo</li>
+          
+          <li className="category-item" style={{ backgroundImage: `url(${imagen})` }}>Escalada</li>
+          <li className="category-item" style={{ backgroundImage: `url(${imagen})` }}>Senderismo</li>
+          <li className="category-item" style={{ backgroundImage: `url(${imagen})` }}>Camping</li>
+          <li className="category-item" style={{ backgroundImage: `url(${imagen})` }}>Camping</li>
+          <li className="category-item" style={{ backgroundImage: `url(${imagen})` }}>Exploración</li>
+          <li className="category-item" style={{ backgroundImage: `url(${imagen})` }}>Montañismo</li>
         </ul>
         <button className="carousel-button right" onClick={scrollRight}>
           &#8250;

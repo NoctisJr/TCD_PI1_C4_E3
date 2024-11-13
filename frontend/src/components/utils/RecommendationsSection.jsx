@@ -1,6 +1,8 @@
 import React from 'react';
-import Card from './card';
+import Card from './Card';
 import imagen1 from '../../assets/imagen1.jpg';
+import './Card.css';
+import Form from "../../views/Register/Form";
 
 const recommendations = [
     {
@@ -19,22 +21,26 @@ const recommendations = [
       description: "Un desafío para aquellos que buscan llevar su entrenamiento y habilidades al siguiente nivel, explorando terrenos difíciles.",
     }
   ];
-  const RecommendationsSection = () => {
-    return (
-      <section className="recommendations-section">
-        <h2 className="recommendations-title">RECOMENDACIONES</h2>
-        <div className="recommendations-list">
-          {recommendations.map((rec, index) => (
-            <Card
-              key={index}
-              image={rec.image}
-              title={rec.title}
-              description={rec.description}
-            />
-          ))}
-        </div>
-      </section>
-    );
-  };
+
+const RecommendationsSection = () => {
+  return (
+    <section className="recommendations-section">
+      <h2 className="recommendations-title">RECOMENDACIONES</h2>
+      <div className="cards-container">
+        {recommendations.map((rec, index) => (
+          <Card
+            key={index}
+            image={rec.image}
+            title={rec.title}
+            description={rec.description}
+          />
+        ))}
+      </div>
+      <>
+      < Form/>
+    </>
+    </section>
+  );
+};
 
 export default RecommendationsSection;

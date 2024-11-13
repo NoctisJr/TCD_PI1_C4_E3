@@ -1,0 +1,71 @@
+/* Estilos generales para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Ajusta el ancho máximo para pantallas grandes */
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #c36e39; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas de los campos */
+form label {
+    font-size: 1rem;
+    color: #f9f9f9;
+    margin-bottom: 0.5rem;
+    text-align: left; /* Alinea el texto de la etiqueta a la izquierda */
+}
+
+/* Campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 1rem;
+    width: 100%; /* Asegura que el campo de entrada ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+/* Efecto al hacer focus en el campo */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #007bff; 
+}
+
+/* Mensajes de error */
+form div {
+    color: #ff0800;
+    font-size: 0.875rem;
+    margin-top: -0.75rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Alinea el mensaje de error a la izquierda */
+}
+
+/* Botón de envío */
+form button[type="submit"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón ocupe todo el ancho */
+    box-sizing: border-box;
+}
+
+form button[type="submit"]:hover {
+    background-color: #a4592a; 
+}

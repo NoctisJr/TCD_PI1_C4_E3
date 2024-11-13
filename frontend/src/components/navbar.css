@@ -17,6 +17,7 @@
     max-height: 100%;
     flex-wrap: wrap;
     gap: 50px;
+    padding:10px 20px;
 }
 
 
@@ -37,18 +38,21 @@
     gap: 1rem;
 }
 
-.link-container li a {
-    text-decoration: none;
-    color: #ebdfc5;
-    font-weight: bold;
-    font-size: 20px;
-
+.nav-button {
+    color: #ebdfc5;        /* Color del texto */
+    background: none;      /* Sin fondo */
+    border: none;          /* Sin borde */
+    cursor: pointer;       /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1.5rem;       /* Ajusta el tamaño de la fuente según prefieras */
+    padding: 0;            /* Quita el padding para que se vea como texto */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold;     /* Hace que el texto resalte un poco más */
 }
 
-.link-container li a:hover {
-    color: #007bff;
+.nav-button:hover {
+    text-decoration: underline; /* Subrayado en hover para parecer un enlace */
+    color: #c36e39;             /* Color diferente en hover */
 }
-
 
 
 .navbar-content {
