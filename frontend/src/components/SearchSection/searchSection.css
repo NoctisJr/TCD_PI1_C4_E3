@@ -1,0 +1,25 @@
+/* Search Section */
+.search-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #ebdfc5;
+  }
+  
+  .title {
+    color: #c36e39; /* Color secundario */
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .search-input {
+    
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #653420; /* Detalles */
+    background-color: #282828;
+    color: #ebdfc5;
+  }

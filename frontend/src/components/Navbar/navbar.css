@@ -1,42 +1,40 @@
 .navbar {
-    width: 100vw;
     height: 15vh;
     padding: 10px 50px;
     background-color: #282828;
     color: #ebdfc5;
     overflow: hidden;
-}
-
-.navbar {
     display: flex;
-    position: fixed;
-    z-index: 50;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-height: 100%;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding:10px 20px;
+    justify-content: center;
 }
-
 
 .logo-container {
     display: flex;
     align-items: center;
 }
 
-
 .logo-image {
     max-height: 90px;
 }
 
-
+/* Links de la navbar */
 .link-container {
     list-style: none;
     display: flex;
     gap: 1rem;
+    padding: 10px;
 }
+
+/*.link-container li a {
+    text-decoration: none;
+    color: #ebdfc5;
+    font-weight: bold;
+    font-size: clamp(16px, 2vw, 20px); Tamaño adaptable según el ancho 
+}
+
+.link-container li a:hover {
+    color: #007bff;
+} */
 
 .nav-button {
     color: #ebdfc5;        /* Color del texto */
@@ -54,10 +52,43 @@
     color: #c36e39;             /* Color diferente en hover */
 }
 
-
 .navbar-content {
     display: flex;
-    width: 100%;
+    width: 90%;
     align-items: center;
     justify-content: space-between;
+    margin: 0px 20px;
+}
+
+/* Media queries para hacerlo responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .navbar-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-image {
+        max-height: 70px; /* Ajuste de tamaño para pantallas pequeñas */
+    }
+
+    .link-container {
+        flex-direction: column; /* Alineación vertical de los links */
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        max-height: 50px;
+    }
+
+    .link-container li a {
+        font-size: clamp(14px, 4vw, 18px); /* Tamaño más pequeño en pantallas pequeñas */
+    }
 }

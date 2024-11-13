@@ -2,7 +2,7 @@
     display: flex;
     max-width: 1000px;
     margin: auto;
-    border: 1px solid #ccc;
+    border: 1px solid #653420;
     border-radius: 8px;
     overflow: hidden;
   }
@@ -27,7 +27,7 @@
   
   .tour-detail-info h1 {
     margin-top: 0;
-    color: rgba(255, 255, 255, 0.87);  
+    color: #282828;  
   }
   
   .tour-options {
