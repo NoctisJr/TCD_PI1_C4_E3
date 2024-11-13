@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/auth")
-public class UserController {
+public class UserControllerRL {
     @Autowired
     private UserRepository userRepository;
 
