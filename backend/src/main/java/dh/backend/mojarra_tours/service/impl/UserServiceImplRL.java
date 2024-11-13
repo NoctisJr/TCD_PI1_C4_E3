@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.regex.Pattern;
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImplRL implements UserService {
 
     @Autowired
     private UserRepository userRepository;
