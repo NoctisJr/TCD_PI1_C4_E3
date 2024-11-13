@@ -1,9 +1,13 @@
 package dh.backend.mojarra_tours.dto;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
+import dh.backend.mojarra_tours.enums.ClimbingStyle;
+import dh.backend.mojarra_tours.enums.Destination;
+import dh.backend.mojarra_tours.enums.Level;
 import lombok.*;
+import dh.backend.mojarra_tours.enums.Day;
 
-import java.time.LocalDate;
+import java.time.LocalTime;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -11,10 +15,13 @@ import java.time.LocalDate;
 @ToString
 public class TourDto {
     private Long id;
-    private String park;
-    private String climbingStyle;
-    private String difficulty;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-    private LocalDate date;
-    private String schedule;
+    private Destination destination;
+    private String description;
+    private Long categoryId;
+    private ClimbingStyle climbingStyle;
+    private Level level;
+    private Day day;
+    @JsonFormat(pattern = "HH:mm")
+    private LocalTime schedule;
+
 }

@@ -1,27 +1,35 @@
 package dh.backend.mojarra_tours.mapper;
 
 import dh.backend.mojarra_tours.dto.TourDto;
+import dh.backend.mojarra_tours.entity.Category;
 import dh.backend.mojarra_tours.entity.Tour;
 
 public class TourMapper {
-    public static TourDto mapToTourDto(Tour tour){ //receives a tour, returns a tourDto
+    // Receives a Tour and converts it to a TourDto
+    public static TourDto mapToTourDto(Tour tour) {
         return new TourDto(
-          tour.getId(),
-          tour.getPark(),
-          tour.getClimbingStyle(),
-          tour.getDifficulty(),
-          tour.getDate(),
-          tour.getSchedule()
-          );
+                tour.getId(),
+                tour.getDestination(),
+                tour.getDescription(),
+                tour.getCategory().getId(), // Extracts categoryId from the Category entity
+                tour.getClimbingStyle(),
+                tour.getLevel(),
+                tour.getDay(),
+                tour.getSchedule()
+        );
     }
 
-    public static Tour mapToTour(TourDto tourDto){ //receives a tourDto, returns a tour
+
+
+    public static Tour mapToTour(TourDto tourDto, Category category) {
         return new Tour(
                 tourDto.getId(),
-                tourDto.getPark(),
+                tourDto.getDestination(),
+                tourDto.getDescription(),
+                category, // Sets the full Category entity here
                 tourDto.getClimbingStyle(),
-                tourDto.getDifficulty(),
-                tourDto.getDate(),
+                tourDto.getLevel(),
+                tourDto.getDay(),
                 tourDto.getSchedule()
         );
     }
