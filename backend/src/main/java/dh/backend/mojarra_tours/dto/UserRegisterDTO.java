@@ -1,5 +1,6 @@
 package dh.backend.mojarra_tours.dto;
 
+import dh.backend.mojarra_tours.enums.Grade;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,6 @@ public class UserRegisterDTO {
     private String email;
     private String password;
     private String phone;
-    private String grade;
+    private Grade grade;
     private Boolean isAdmin;
 }
