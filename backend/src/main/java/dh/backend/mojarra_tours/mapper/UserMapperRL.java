@@ -4,10 +4,14 @@ import dh.backend.mojarra_tours.dto.UserRegisterDTO;
 import dh.backend.mojarra_tours.dto.UserLoginDTO;
 import dh.backend.mojarra_tours.dto.UserResponseDTO;
 import dh.backend.mojarra_tours.entity.User;
+import dh.backend.mojarra_tours.util.JwtUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class UserMapperRL {
+    @Autowired
+    private JwtUtil jwtUtil;
 
     // Mapea UserRegisterDTO a User (para registrar usuario)
     public User toEntity(UserRegisterDTO userRegisterDTO) {
@@ -32,12 +36,10 @@ public class UserMapperRL {
     // Mapea User a UserResponseDTO (para devolver la respuesta al usuario)
     public UserResponseDTO toResponseDTO(User user) {
         UserResponseDTO responseDTO = new UserResponseDTO();
-        responseDTO.setId(user.getId());
-        responseDTO.setName(user.getName());
-        responseDTO.setEmail(user.getEmail());
-        responseDTO.setPhone(user.getPhone());
-        responseDTO.setGrade(user.getGrade());
-        responseDTO.setIsAdmin(user.getIsAdmin());
+
+        // Genera el token JWT
+        String token = jwtUtil.generateToken(user.getId().toString(), user.getIsAdmin(), user.getGrade());
+        responseDTO.setToken(token);
         return responseDTO;
     }
 }

@@ -10,10 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserResponseDTO {
-    private Long id;
-    private String name;
-    private String email;
-    private String phone;
-    private Grade grade;
-    private Boolean isAdmin;
+
+    private String token; // Nuevo campo para el token
 }

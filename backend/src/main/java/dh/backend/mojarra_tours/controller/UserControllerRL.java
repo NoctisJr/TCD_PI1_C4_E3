@@ -7,6 +7,7 @@ import dh.backend.mojarra_tours.entity.User;
 import dh.backend.mojarra_tours.mapper.UserMapperRL;
 import dh.backend.mojarra_tours.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import dh.backend.mojarra_tours.util.JwtUtil;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 @RestController
@@ -17,6 +18,8 @@ public class UserControllerRL {
 
     @Autowired
     private UserMapperRL userMapper;
+    @Autowired
+    private JwtUtil jwtUtil;
 
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody UserRegisterDTO userRegisterDTO) {
@@ -40,8 +43,12 @@ public class UserControllerRL {
             return ResponseEntity.status(401).body(null);  // Error en login
         }
 
+        // Generar el token JWT
+        String token = jwtUtil.generateToken(user.getId().toString(), user.getIsAdmin(), user.getGrade());
+
         // Mapea el usuario autenticado a UserResponseDTO
         UserResponseDTO responseDTO = userMapper.toResponseDTO(user);
+        responseDTO.setToken(token); // Asigna el token generado
 
         return ResponseEntity.ok(responseDTO);
     }
