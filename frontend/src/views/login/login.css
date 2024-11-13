@@ -1,0 +1,80 @@
+
+.login{
+    display: flex;
+    color: #282828;
+    background-color: #ebdfc5;
+    margin: 50px;
+    border-radius: 10px;
+    border: 2px solid #653420;
+}
+
+.columna1{
+    width: 50%;
+    margin: 25px;
+}
+
+.seccion1{
+    height: 45%;
+    padding: 10px;
+}
+
+.seccion2{
+    height: 45%;  
+}
+
+.seccion2 form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.seccion2 input{
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.columna2{
+    width: 45%;
+    margin: 25px;
+}
+
+/*Seccion imagenes del login*/
+
+.columna2 img {
+    width: 95%;
+    height: 100%;
+    object-fit: cover;    
+    border-radius: 10px;
+    border: 2px solid #653420;
+}
+
+.imagenResponsive{
+    width: 100%;
+    height: 40%;
+    object-fit: cover;    
+    border-radius: 10px;
+    border: 2px solid #653420;
+    visibility: hidden;
+}
+
+
+
+@media (max-width: 1024px) {
+    .imagenResponsive{
+        visibility: visible;
+    }
+    .columna1{
+        width: 100%;
+    }
+    .columna2 {
+        width: 0%;
+        visibility: hidden;    
+        margin: 0px;
+    }
+    .seccion1{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+}

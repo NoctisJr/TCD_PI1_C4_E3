@@ -1,6 +1,113 @@
-.categories-section {
+/*.categories-section {
   width: 100%;
   max-width: 1200px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.categories-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; 
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 10px 0;
+  margin: 0 px;
+  list-style: none;
+  width: 100%;
+  flex-wrap: nowrap;
+  padding-left: 200px; 
+  padding-right: 20px; 
+}
+
+.categories-list li {
+  flex: 0 0 auto;
+  color: #000; 
+  padding: 80px 20px; 
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+  aspect-ratio: 1 / 1;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.categories-list li:hover {
+  transform: scale(1.05);
+
+}
+
+.carousel-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: padding 0.3s, font-size 0.3s;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: #653420;
+}
+
+
+@media (max-width: 1089px) {
+  .categories-list{
+    padding-left: 0px; 
+  }
+  .categories-list li {
+      min-width: 100px; 
+      padding: 50px 16px;
+  }
+  .carousel-button {
+      padding: 8px;
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 1089px) {
+  .categories-list li {
+      min-width: 140px;
+      padding: 60px 16px;
+      aspect-ratio: 1 / 1; 
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-list li {
+      min-width: 120px;
+      padding: 50px 12px;
+      aspect-ratio: 1 / 1; 
+  }
+} */
+ 
+.categories-section {
+  background-color: #ebdfc5;
   text-align: center;
   padding: 20px;
   position: relative;
@@ -23,14 +130,14 @@
   list-style: none;
   width: 100%;
   flex-wrap: nowrap;
-  padding-left: 200px; /* Espacio adicional para ver el primer elemento */
-  padding-right: 20px; /* Espacio adicional para ver el último elemento */
+  padding-left: 50px; /* Espacio adicional para ver el primer elemento */
+  padding-right: 50px; /* Espacio adicional para ver el último elemento */
 }
 
 .categories-list li {
   flex: 0 0 auto;
   color: #000; /* Color negro para el texto */
-  padding: 80px 20px; /* Reducir padding para centrar mejor el texto */
+  padding: 150px 35px;
   border-radius: 8px;
   font-weight: bold;
   text-align: center;
@@ -39,15 +146,29 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: transform 0.3s ease;
-  aspect-ratio: 1 / 1;
-  display: flex; /* Centramos el contenido */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
 }
-
 .categories-list li:hover {
   transform: scale(1.05);
 
+}
+/* Estilos para cada categoría con imagen */
+.categories-list li.escalada {
+  background-image: url('D:/Digital House/Proyecto Integrador/Frontend/src/assets/equipo_escalada.jpg');
+}
+.categories-list li.senderismo {
+  background-image: url('ruta/a/imagen-senderismo.jpg');
+}
+.categories-list li.aventuras {
+  background-image: url('ruta/a/imagen-aventuras.jpg');
+}
+.categories-list li.camping {
+  background-image: url('D:/Digital House/Proyecto Integrador/Frontend/src/assets/camping.jpeg');
+}
+.categories-list li.exploracion {
+  background-image: url('ruta/a/imagen-exploracion.jpg');
+}
+.categories-list li.montanismo {
+  background-image: url('ruta/a/imagen-montanismo.jpg');
 }
 
 .carousel-button {
@@ -90,18 +211,13 @@
   }
 }
 
-@media (max-width: 1089px) {
-  .categories-list li {
-      min-width: 140px;
-      padding: 60px 16px;
-      aspect-ratio: 1 / 1; /* Mantener proporción cuadrada en pantallas medianas */
-  }
-}
-
 @media (max-width: 480px) {
   .categories-list li {
-      min-width: 120px;
-      padding: 50px 12px;
-      aspect-ratio: 1 / 1; /* Proporción cuadrada en pantallas pequeñas */
+      min-width: 100px; /* Ajuste de ancho para pantallas pequeñas */
+      padding: 8px 16px;
+  }
+  .carousel-button {
+      padding: 6px;
+      font-size: 18px;
   }
 }
