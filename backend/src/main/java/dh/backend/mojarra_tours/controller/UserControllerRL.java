@@ -4,7 +4,7 @@ import dh.backend.mojarra_tours.dto.UserRegisterDTO;
 import dh.backend.mojarra_tours.dto.UserLoginDTO;
 import dh.backend.mojarra_tours.dto.UserResponseDTO;
 import dh.backend.mojarra_tours.entity.User;
-import dh.backend.mojarra_tours.mapper.UserMapper;
+import dh.backend.mojarra_tours.mapper.UserMapperRL;
 import dh.backend.mojarra_tours.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ public class UserControllerRL {
     private UserRepository userRepository;
 
     @Autowired
-    private UserMapper userMapper;
+    private UserMapperRL userMapper;
 
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody UserRegisterDTO userRegisterDTO) {

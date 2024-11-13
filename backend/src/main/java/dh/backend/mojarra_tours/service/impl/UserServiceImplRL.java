@@ -5,7 +5,7 @@ import dh.backend.mojarra_tours.dto.UserResponseDTO;
 import dh.backend.mojarra_tours.entity.User;
 import dh.backend.mojarra_tours.repository.UserRepository;
 import dh.backend.mojarra_tours.service.UserService;
-import dh.backend.mojarra_tours.mapper.UserMapper;
+import dh.backend.mojarra_tours.mapper.UserMapperRL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ public class UserServiceImplRL implements UserService {
     private UserRepository userRepository;
 
     @Autowired
-    private UserMapper userMapper;
+    private UserMapperRL userMapper;
 
     private static final Pattern EMAIL_PATTERN = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
     private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();

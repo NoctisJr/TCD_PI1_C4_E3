@@ -7,7 +7,7 @@ import dh.backend.mojarra_tours.entity.User;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserMapper {
+public class UserMapperRL {
 
     // Mapea UserRegisterDTO a User (para registrar usuario)
     public User toEntity(UserRegisterDTO userRegisterDTO) {
