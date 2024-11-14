@@ -35,7 +35,9 @@ const LoginForm = () => {
       axios.post(apiUrl, dataToSend)
         .then((res) => {
           console.log(res.data);
+          console.log(res.data.isAdmin);
           alert("Login exitoso!");
+          sessionStorage.setItem("isAdmin", res.data.isAdmin);
           sessionStorage.setItem("isLoggedIn", "true");
           navigate('/home');
         })
