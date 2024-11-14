@@ -10,7 +10,6 @@ import "./Home.css"
 const Home = () => {
   return (
     <div className="home-body">
-
       <Navbar/>
       <SearchSection/>
       <CategoryCarousel />
