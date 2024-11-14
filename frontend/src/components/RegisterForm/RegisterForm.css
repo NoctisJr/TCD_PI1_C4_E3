@@ -1,4 +1,13 @@
 /* Estilos generales para el formulario */
+
+.register-form-container{
+  display: flex;
+  color: #282828;
+  background-color: #ebdfc5;
+  margin: 50px;
+  border-radius: 10px;
+}
+
 .register-form {
   display: flex;
   flex-direction: column;
@@ -10,7 +19,30 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #653420;
 }
+
+.columna1-registro{
+  width: 45%;
+  margin: 25px;
+}
+.columna1-registro img {
+  width: 95%;
+  height: 100%;
+  object-fit: cover;    
+  border-radius: 10px;
+  border: 2px solid #653420;
+}
+
+.columna2-registro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 25px;
+}
+
+
 
 /* Etiquetas de los campos */
 .register-form label {
@@ -68,4 +100,10 @@
 
 .register-form button[type="submit"]:hover {
   background-color: #a4592a; 
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
