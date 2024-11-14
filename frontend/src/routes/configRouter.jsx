@@ -1,8 +1,9 @@
 import TourDetail from "../components/TourDetail/TourDetail";
 import Home from "../views/Home/Home";
 import NotFound from "../views/NotFount/NotFount";
-//import Register from "../views/Register/Register";
 import Tours from "../views/Tours/Tours";
+import Register from "../views/Register/Register";
+import Login from "../views/login/Login";
 
 const configRouter = [
   {
@@ -18,8 +19,12 @@ const configRouter = [
     element: <TourDetail />,
   },
   {
-    path: "/misitio",
-    element: <Home />,
+    path: "/register",
+    element: <Register/>,
+  },
+  {
+    path: "/login",
+    element: <Login/>,
   },
   { 
     path: "*",

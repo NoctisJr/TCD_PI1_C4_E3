@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import './Form.css';
+import React, { useState } from "react";
+import "./RegisterForm.css";
 
 const RegisterForm = () => {
-  // Estados de los campos de entrada
-  const [nombre, setNombre] = useState('');
-  const [apellido, setApellido] = useState('');
-  const [email, setEmail] = useState('');
-  const [contraseña, setContraseña] = useState('');
+  const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
+  const [email, setEmail] = useState("");
+  const [contraseña, setContraseña] = useState("");
   const [errores, setErrores] = useState({});
 
   // Función para validar el formulario
@@ -14,12 +13,16 @@ const RegisterForm = () => {
     const nuevosErrores = {};
 
     // Validaciones básicas
-    if (!nombre.trim()) nuevosErrores.nombre = 'El nombre es obligatorio.';
-    if (!apellido.trim()) nuevosErrores.apellido = 'El apellido es obligatorio.';
-    if (!email.trim()) nuevosErrores.email = 'El correo es obligatorio.';
-    else if (!/\S+@\S+\.\S+/.test(email)) nuevosErrores.email = 'El correo no es válido.';
-    if (!contraseña) nuevosErrores.contraseña = 'La contraseña es obligatoria.';
-    else if (contraseña.length < 6) nuevosErrores.contraseña = 'La contraseña debe tener al menos 6 caracteres.';
+    if (!nombre.trim()) nuevosErrores.nombre = "El nombre es obligatorio.";
+    if (!apellido.trim())
+      nuevosErrores.apellido = "El apellido es obligatorio.";
+    if (!email.trim()) nuevosErrores.email = "El correo es obligatorio.";
+    else if (!/\S+@\S+\.\S+/.test(email))
+      nuevosErrores.email = "El correo no es válido.";
+    if (!contraseña) nuevosErrores.contraseña = "La contraseña es obligatoria.";
+    else if (contraseña.length < 6)
+      nuevosErrores.contraseña =
+        "La contraseña debe tener al menos 6 caracteres.";
 
     return nuevosErrores;
   };
@@ -28,9 +31,9 @@ const RegisterForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const nuevosErrores = validarFormulario();
-    
+
     if (Object.keys(nuevosErrores).length === 0) {
-      alert('Registro exitoso!');
+      alert("Registro exitoso!");
       // Aquí puedes agregar la lógica de envío al servidor
     } else {
       setErrores(nuevosErrores);
@@ -48,9 +51,11 @@ const RegisterForm = () => {
             id="nombre"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
-            className={errores.nombre ? 'input-error' : ''}
+            className={errores.nombre ? "input-error" : ""}
           />
-          {errores.nombre && <span className="error-message">{errores.nombre}</span>}
+          {errores.nombre && (
+            <span className="error-message">{errores.nombre}</span>
+          )}
         </div>
 
         <div className="form-group">
@@ -60,9 +65,11 @@ const RegisterForm = () => {
             id="apellido"
             value={apellido}
             onChange={(e) => setApellido(e.target.value)}
-            className={errores.apellido ? 'input-error' : ''}
+            className={errores.apellido ? "input-error" : ""}
           />
-          {errores.apellido && <span className="error-message">{errores.apellido}</span>}
+          {errores.apellido && (
+            <span className="error-message">{errores.apellido}</span>
+          )}
         </div>
 
         <div className="form-group">
@@ -72,9 +79,11 @@ const RegisterForm = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={errores.email ? 'input-error' : ''}
+            className={errores.email ? "input-error" : ""}
           />
-          {errores.email && <span className="error-message">{errores.email}</span>}
+          {errores.email && (
+            <span className="error-message">{errores.email}</span>
+          )}
         </div>
 
         <div className="form-group">
@@ -84,12 +93,16 @@ const RegisterForm = () => {
             id="contraseña"
             value={contraseña}
             onChange={(e) => setContraseña(e.target.value)}
-            className={errores.contraseña ? 'input-error' : ''}
+            className={errores.contraseña ? "input-error" : ""}
           />
-          {errores.contraseña && <span className="error-message">{errores.contraseña}</span>}
+          {errores.contraseña && (
+            <span className="error-message">{errores.contraseña}</span>
+          )}
         </div>
 
-        <button type="submit" className="submit-button">Registrarse</button>
+        <button type="submit" className="submit-button">
+          Registrarse
+        </button>
       </form>
     </div>
   );
