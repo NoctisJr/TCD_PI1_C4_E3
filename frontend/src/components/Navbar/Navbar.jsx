@@ -43,8 +43,8 @@ const Navbar = () => {
         <ul className="link-container">
           {isLoggedIn ? (
               <>
-              <li style={{ visibility: 'hidden' }}><button onClick={handleLoginClick} className="nav-button">Iniciar Sesión</button></li>
-              <li style={{ visibility: 'hidden' }}><button onClick={handleRegisterClick} className="nav-button">Crear Cuenta</button></li>
+              <li style={{ visibility: 'hidden', display: 'none' }}><button onClick={handleLoginClick} className="nav-button">Iniciar Sesión</button></li>
+              <li style={{ visibility: 'hidden', display: 'none' }}><button onClick={handleRegisterClick} className="nav-button">Crear Cuenta</button></li>
               <li style={{ visibility: 'visible' }}><button onClick={handleLogOutClick} className="nav-button">Cerrar Sesion</button></li>
               </>
             ) : (
