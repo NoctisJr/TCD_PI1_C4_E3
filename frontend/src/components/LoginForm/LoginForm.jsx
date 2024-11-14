@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import loginImage from '../../assets/Img/loginImage.jpg';
 import loginImageResponsive from '../../assets/Img/loginImageResponsive.jpg';
@@ -9,6 +10,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [errores, setErrores] = useState({});
   const apiUrl = "https://la-ramoja-production.up.railway.app/auth/login"; 
+  const navigate = useNavigate();
 
   const validarFormulario = () => {
     const nuevosErrores = {};
@@ -34,6 +36,8 @@ const LoginForm = () => {
         .then((res) => {
           console.log(res.data);
           alert("Login exitoso!");
+          sessionStorage.setItem("isLoggedIn", "true");
+          navigate('/home');
         })
         .catch((error) => {
           console.error("Error al iniciar sesión:", error);
