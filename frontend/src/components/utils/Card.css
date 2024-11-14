@@ -52,9 +52,10 @@
 /* Media Queries para tamaños de pantalla específicos */
 @media (max-width: 1089px) {
     .card {
-        max-width: 90%; /* Ajusta el ancho máximo de la tarjeta */
+        max-width: 85%; /* Ajusta el ancho máximo de la tarjeta */
         padding-left: 50px; /* Menos padding en los lados */
         padding-right: 50px; /* Menos padding en los lados */
+        align-items: center;
     }
 
     .card img {
@@ -70,7 +71,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     .card {
         max-width: 95%; /* Casi ocupa todo el ancho */
         padding: 10px; /* Menos padding general */
@@ -88,5 +89,8 @@
 
     .card-description {
         font-size: 0.75rem; /* Ajusta el tamaño de fuente para la descripción */
+    }
+    .card:hover {
+        transform: none;
     }
 }

@@ -15,6 +15,7 @@ const Home = () => {
       <SearchSection/>
       <CategoryCarousel />
       <RecommendationsSection />
+      <TourDetail/>
       <Footer/>
     </div>
   );
