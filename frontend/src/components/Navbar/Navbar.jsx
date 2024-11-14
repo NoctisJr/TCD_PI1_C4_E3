@@ -27,6 +27,7 @@ const Navbar = () => {
 
   const handleLogOutClick = () => {
     sessionStorage.setItem("isLoggedIn", "false");
+    sessionStorage.removeItem("isAdmin");
     location.reload();  
   };
 
