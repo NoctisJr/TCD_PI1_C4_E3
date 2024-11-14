@@ -3,7 +3,7 @@ const Footer = ({ onLogoutClick }) => {
     return (
       <div className="sidebar-footer">
         <button onClick={onLogoutClick} className="footer-button">
-          Logout
+          Home
         </button>
       </div>
     );

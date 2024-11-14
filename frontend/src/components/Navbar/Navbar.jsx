@@ -5,20 +5,20 @@ import './navbar.css';
 const Navbar = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false); // Estado para isAdmin
+  const [isAdmin, setIsAdmin] = useState(false); 
 
   useEffect(() => {
     const loggedInStatus = sessionStorage.getItem("isLoggedIn");
     const adminStatus = sessionStorage.getItem("isAdmin");
 
     setIsLoggedIn(loggedInStatus === "true");
-    setIsAdmin(adminStatus === "true"); // Actualiza isAdmin según sessionStorage
+    setIsAdmin(adminStatus === "true"); 
   }, []);
 
   const handleLoginClick = () => navigate('/login');
   const handleRegisterClick = () => navigate('/register');
   const handleLogoClick = () => navigate('/home');
-  const handleDashboardClick = () => navigate('/dashboard'); // Redirección a Dashboard
+  const handleDashboardClick = () => navigate('/admin');
 
   const handleLogOutClick = () => {
     sessionStorage.setItem("isLoggedIn", "false");

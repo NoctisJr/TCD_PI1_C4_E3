@@ -3,22 +3,29 @@ import NavLinks from "./NavLinks";
 import UserProfile from "./UserProfile";
 import Footer from "./Footer";
 import "./Sidebar.css";
+import { useNavigate } from 'react-router-dom';
+
 
 const Sidebar = () => {
+  const navigate = useNavigate(); 
 
-      const handleLogoutClick = () => {
-        // Logic to log the user out
-        alert('Logging out');
-      };
+  const handleLogoutClick = () => {
+    
+    //sessionStorage.removeItem("isLoggedIn");
+    //sessionStorage.removeItem("isAdmin");
 
-    return (
-      <aside className="sidebar">
-        <LogoHeader />
-        <UserProfile name="Manuel" email="manuel@gmail.com" />
-        <NavLinks />
-        <Footer onLogoutClick={handleLogoutClick} />
-      </aside>
-    );
+    
+    navigate('/home');
   };
 
-export default Sidebar
+  return (
+    <aside className="sidebar">
+      <LogoHeader />
+      <UserProfile name="Manuel" email="manuel@gmail.com" />
+      <NavLinks />
+      <Footer onLogoutClick={handleLogoutClick} /> 
+    </aside>
+  );
+};
+
+export default Sidebar;
