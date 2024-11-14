@@ -1,11 +1,12 @@
-import React from 'react';
+import BtnPrimary from '../Buttons/BtnPrimary/BtnPrimary';
 import './searchSection.css';
 
 const SearchSection = () => {
     return (
-        <header className="search-section">
+        <div className="search-section">
             <input type="text" placeholder="Que Aventura Buscas ?" className="search-input" />
-        </header>
+            <BtnPrimary children = "Buscar"/>
+        </div>
     );
     };
 

@@ -1,0 +1,39 @@
+.btn-primary {
+  height: 45px;
+  font-size: 16px;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #C36E29;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+
+.btn-primary:hover {
+  background-color: #653420;
+  transform: scale(1.05);
+}
+
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 5px #653420;
+}
+
+
+.btn-primary:active {
+  background-color: #653420;
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+
+  .btn-primary {
+    height: 40px;
+    font-size: 14px;
+    padding: 0 16px;
+  }
+}
