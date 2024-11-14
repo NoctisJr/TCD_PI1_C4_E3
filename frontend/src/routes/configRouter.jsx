@@ -11,6 +11,10 @@ const configRouter = [
     element: <Home />,
   },
   {
+    path: "/home",
+    element: <Home />,
+  },
+  {
     path: "/tours",
     element: <Tours />,
   },

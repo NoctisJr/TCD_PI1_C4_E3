@@ -1,5 +1,14 @@
 /* Estilos generales para el formulario */
-form {
+
+.register-form-container{
+  display: flex;
+  color: #282828;
+  background-color: #ebdfc5;
+  margin: 50px;
+  border-radius: 10px;
+}
+
+.register-form {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -10,10 +19,33 @@ form {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #653420;
 }
 
+.columna1-registro{
+  width: 45%;
+  margin: 25px;
+}
+.columna1-registro img {
+  width: 95%;
+  height: 100%;
+  object-fit: cover;    
+  border-radius: 10px;
+  border: 2px solid #653420;
+}
+
+.columna2-registro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 25px;
+}
+
+
+
 /* Etiquetas de los campos */
-form label {
+.register-form label {
   font-size: 1rem;
   color: #f9f9f9;
   margin-bottom: 0.5rem;
@@ -21,9 +53,9 @@ form label {
 }
 
 /* Campos de entrada */
-form input[type="text"],
-form input[type="email"],
-form input[type="password"] {
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -36,14 +68,14 @@ form input[type="password"] {
 }
 
 /* Efecto al hacer focus en el campo */
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="password"]:focus {
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
   border-color: #007bff; 
 }
 
 /* Mensajes de error */
-form div {
+.register-form div {
   color: #ff0800;
   font-size: 0.875rem;
   margin-top: -0.75rem;
@@ -52,7 +84,7 @@ form div {
 }
 
 /* Botón de envío */
-form button[type="submit"] {
+.register-form button[type="submit"] {
   padding: 0.75rem;
   font-size: 1rem;
   font-weight: bold;
@@ -66,6 +98,12 @@ form button[type="submit"] {
   box-sizing: border-box;
 }
 
-form button[type="submit"]:hover {
+.register-form button[type="submit"]:hover {
   background-color: #a4592a; 
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
