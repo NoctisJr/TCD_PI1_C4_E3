@@ -4,6 +4,7 @@ import NotFound from "../views/NotFount/NotFount";
 import Tours from "../views/Tours/Tours";
 import Register from "../views/Register/Register";
 import Login from "../views/login/Login";
+import AdminPanel from "../views/AdminPanel/AdminPanel";
 
 const configRouter = [
   {
@@ -26,10 +27,15 @@ const configRouter = [
     path: "/login",
     element: <Login/>,
   },
+  {
+    path: "/admin",
+    element: <AdminPanel />,
+  },
   { 
     path: "*",
     element: <NotFound />
   },
+
 ];
 
 export default configRouter;

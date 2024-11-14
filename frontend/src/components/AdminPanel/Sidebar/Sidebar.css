@@ -1,0 +1,97 @@
+/* Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Adjust width as needed */
+  height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Keep it on top */
+}
+  
+  .logo-header {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .logo-header h3{
+    font-size: 1.2em;
+    margin-bottom: 0px;
+  }
+
+  .logo-header img{
+    filter: invert(1) grayscale(1) brightness(0.9);
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    margin-bottom:2px;
+    font-size: large;
+  }
+  
+  .user-email {
+    color: #666;
+    font-size: 0.9em;
+    margin-top:2px;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+  }
+  
+  .nav-links a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .sidebar-footer {
+    color: #666;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: auto;
+  }
+
+  .sidebar-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .footer-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  
+  .footer-button:hover {
+    background-color: #0056b3;
+  }
+  
