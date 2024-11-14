@@ -17,6 +17,13 @@
     max-height: 90px;
 }
 
+.logo-image:hover{
+    border-radius: 10px;
+    border: 3px solid #c36e39;
+}
+
+  
+
 /* Links de la navbar */
 .link-container {
     list-style: none;
@@ -24,17 +31,6 @@
     gap: 1rem;
     padding: 10px;
 }
-
-/*.link-container li a {
-    text-decoration: none;
-    color: #ebdfc5;
-    font-weight: bold;
-    font-size: clamp(16px, 2vw, 20px); Tamaño adaptable según el ancho 
-}
-
-.link-container li a:hover {
-    color: #007bff;
-} */
 
 .nav-button {
     color: #ebdfc5;        /* Color del texto */

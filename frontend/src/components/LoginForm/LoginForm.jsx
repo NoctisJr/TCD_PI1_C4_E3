@@ -1,38 +1,49 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 import loginImage from '../../assets/Img/loginImage.jpg';
 import loginImageResponsive from '../../assets/Img/loginImageResponsive.jpg';
 import './LoginForm.css';
 
 const LoginForm = () => {
-  // Estados para almacenar los valores del formulario y los errores
   const [email, setEmail] = useState("");
-  const [contraseña, setContraseña] = useState("");
+  const [password, setPassword] = useState("");
   const [errores, setErrores] = useState({});
+  const apiUrl = "https://la-ramoja-production.up.railway.app/auth/login"; 
+  const navigate = useNavigate();
 
-  // Función para validar el formulario
   const validarFormulario = () => {
     const nuevosErrores = {};
-
-    // Validaciones básicas
     if (!email.trim()) nuevosErrores.email = "El correo es obligatorio.";
     else if (!/\S+@\S+\.\S+/.test(email))
       nuevosErrores.email = "El correo no es válido.";
     
-    if (!contraseña) nuevosErrores.contraseña = "La contraseña es obligatoria.";
-    else if (contraseña.length < 6)
-      nuevosErrores.contraseña = "La contraseña debe tener al menos 6 caracteres.";
+    if (!password) nuevosErrores.password = "La contraseña es obligatoria.";
+    else if (password.length < 6)
+      nuevosErrores.password = "La contraseña debe tener al menos 6 caracteres.";
 
     return nuevosErrores;
   };
 
-  // Función para manejar el envío del formulario
   const handleSubmit = (event) => {
     event.preventDefault();
     const nuevosErrores = validarFormulario();
 
     if (Object.keys(nuevosErrores).length === 0) {
-      alert("Login exitoso!");
-      // Aquí puedes agregar la lógica de envío al servidor
+      const dataToSend = { email, password };
+      
+      axios.post(apiUrl, dataToSend)
+        .then((res) => {
+          console.log(res.data);
+          alert("Login exitoso!");
+          sessionStorage.setItem("isLoggedIn", "true");
+          navigate('/home');
+        })
+        .catch((error) => {
+          console.error("Error al iniciar sesión:", error);
+          alert("Hubo un error en el inicio de sesión.");
+        });
+
     } else {
       setErrores(nuevosErrores);
     }
@@ -64,10 +75,10 @@ const LoginForm = () => {
               name="password"
               placeholder="Contraseña"
               className='passwordInput'
-              value={contraseña}
-              onChange={(e) => setContraseña(e.target.value)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
-            {errores.contraseña && <div className="error">{errores.contraseña}</div>}
+            {errores.password && <div className="error">{errores.password}</div>}
 
             <input type="submit" value="Login" className='loginButton' />
           </form>
@@ -79,6 +90,6 @@ const LoginForm = () => {
       </div>
     </div>
   );
-}
+};
 
 export default LoginForm;
