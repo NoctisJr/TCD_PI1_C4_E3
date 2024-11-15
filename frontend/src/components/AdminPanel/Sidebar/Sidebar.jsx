@@ -21,7 +21,7 @@ const Sidebar = () => {
   return (
     <aside className="sidebar">
       <LogoHeader />
-      <UserProfile name="Manuel" email="manuel@gmail.com" />
+      <UserProfile name="Andres" email="andres@gmail.com" />
       <NavLinks />
       <Footer onLogoutClick={handleLogoutClick} /> 
     </aside>

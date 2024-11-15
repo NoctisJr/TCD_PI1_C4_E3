@@ -6,13 +6,16 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false); 
+  const [userName, setUserName] = useState(""); 
 
   useEffect(() => {
     const loggedInStatus = sessionStorage.getItem("isLoggedIn");
     const adminStatus = sessionStorage.getItem("isAdmin");
+    const loggedUser = sessionStorage.getItem("user");
 
     setIsLoggedIn(loggedInStatus === "true");
-    setIsAdmin(adminStatus === "true"); 
+    setIsAdmin(adminStatus === "true");
+    setUserName(loggedUser);
   }, []);
 
   const handleLoginClick = () => navigate('/login');
@@ -23,6 +26,7 @@ const Navbar = () => {
   const handleLogOutClick = () => {
     sessionStorage.setItem("isLoggedIn", "false");
     sessionStorage.removeItem("isAdmin");
+    sessionStorage.removeItem("user");
     location.reload();
   };
 
@@ -38,8 +42,11 @@ const Navbar = () => {
               <li style={{ display: 'none' }}><button onClick={handleLoginClick} className="nav-button">Iniciar Sesión</button></li>
               <li style={{ display: 'none' }}><button onClick={handleRegisterClick} className="nav-button">Crear Cuenta</button></li>
               <li><button onClick={handleLogOutClick} className="nav-button">Cerrar Sesion</button></li>
+              <li><button  className="nav-button">👤{userName}</button></li>
+
               {isAdmin && (
                 <li><button onClick={handleDashboardClick} className="nav-button">Dashboard</button></li>
+                
               )}
             </>
           ) : (

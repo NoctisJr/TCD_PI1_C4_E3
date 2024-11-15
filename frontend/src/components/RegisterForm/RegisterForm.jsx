@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./RegisterForm.css";
 import RegisterImage from "../../assets/Img/imagen2.png"
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
   const [nombre, setNombre] = useState("");
@@ -9,6 +11,8 @@ const RegisterForm = () => {
   const [contraseña, setContraseña] = useState("");
   const [errores, setErrores] = useState({});
   const [registroExitoso, setRegistroExitoso] = useState(false); 
+  const apiUrl = "https://la-ramoja-production.up.railway.app/api/user"; 
+  const navigate = useNavigate();
 
   // Función para validar el formulario
   const validarFormulario = () => {
@@ -31,7 +35,19 @@ const RegisterForm = () => {
 
     if (Object.keys(nuevosErrores).length === 0) {
       setRegistroExitoso(true); // Cambia el estado para mostrar el mensaje de éxito
-      // Aquí puedes agregar la lógica de envío al servidor si es necesario
+      const dataToSend = {name: nombre, email: email, password: contraseña, phone: "0000000", grade: "YDS_5_6", isAdmin: false}
+  
+        axios.post(apiUrl, dataToSend, { headers: { 'Content-Type': 'application/json' } })
+        .then((res) => {
+          console.log(res.data);
+          console.log(res.data.isAdmin);
+          alert("Registro exitoso!");
+          navigate('/login');
+        })
+        .catch((error) => {
+          console.error("Error al iniciar sesión:", error);
+          alert("Hubo un error en el inicio de sesión.");
+        });
     } else {
       setErrores(nuevosErrores);
       setRegistroExitoso(false); 

@@ -120,7 +120,7 @@ const AdminPanel = () => {
     <div className='admin-panel'>
         <Sidebar />
         <div className="content">
-        <Header title="Categorias" onSearch={handleSearch} />
+        <Header title="Tours" onSearch={handleSearch} />
         <Table data={data}/>
       </div>
     </div>

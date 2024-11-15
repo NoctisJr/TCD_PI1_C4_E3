@@ -21,6 +21,7 @@ const RecommendationsSection = () => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/tours");
+    window.scrollTo(0, 0); // volver a la parte de arriba de la página.
   };
 
   return (
@@ -35,6 +36,7 @@ const RecommendationsSection = () => {
             adrenalina.
           </p>
           <BtnPrimary children={"Ver Tours"} onClick={handleClick} className="btn-primarySection"/>
+          
         </div>
       </div>
 
