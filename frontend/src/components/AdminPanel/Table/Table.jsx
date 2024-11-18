@@ -1,27 +1,29 @@
 /* eslint-disable react/prop-types */
 import TableRow from './TableRow';
 import './Table.css';
+import { useState } from 'react';
 
 const Table = ({ data }) => {
+  const headers = Object.keys(data[0] || {});
   return (
     <div className="table-container">
       <table>
         <thead>
           <tr>
-            <th>Lugar</th>
-            <th>Descripción</th>
-            <th>Categoría</th>
-            <th>Tipo Escalada</th>
-            <th>Dificultad</th>
-            <th>Día</th>
-            <th>Horario</th>
+            {
+              headers.map((header,index)=> {
+                return(
+                  <th key={index}>{header}</th>
+                )
+              })
+            }
             <th>Estatus</th>
             <th>Acción</th>
           </tr>
         </thead>
         <tbody>
           {data.map((item) => (
-            <TableRow key={item.id} item={item} />
+            <TableRow key={item.id} item={item} headers={headers} />
           ))}
         </tbody>
       </table>

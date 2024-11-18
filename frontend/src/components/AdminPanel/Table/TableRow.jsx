@@ -1,21 +1,18 @@
 /* eslint-disable react/prop-types */
-const TableRow = ({ item }) => {
+const TableRow = ({ item, headers }) => {
     return (
         <tr>
-            <td>{item.destination}</td>
-            <td>{item.description}</td>
-            <td>{item.categoryId}</td>
-            <td>{item.climbingStyle || '-'}</td>
-            <td>{item.level || '-'}</td>
-            <td>{item.day}</td>
-            <td>{item.schedule}</td>
+            {headers.map((header, index) => (
+                <td key={index}>{item[header]===true? "ADMIN": item[header] || '-'}</td>
+            ))}
             <td>
-                <span className={`status ${item.status.toLowerCase()}`}>
-                    {item.status}
+                <span className={`status ${item.status?.toLowerCase() || "activo"}`}>
+                    {item.status || "Activo"}
                 </span>
             </td>
             <td>
                 <button className="action-button">✏️</button>
+                <button className="action-button">❌</button>
             </td>
         </tr>
     );

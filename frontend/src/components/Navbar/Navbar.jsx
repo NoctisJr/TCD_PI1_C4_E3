@@ -11,11 +11,13 @@ const Navbar = () => {
   useEffect(() => {
     const loggedInStatus = sessionStorage.getItem("isLoggedIn");
     const adminStatus = sessionStorage.getItem("isAdmin");
-    const loggedUser = sessionStorage.getItem("user");
+    const loggedUser = JSON.parse(sessionStorage.getItem("user"));
 
     setIsLoggedIn(loggedInStatus === "true");
     setIsAdmin(adminStatus === "true");
-    setUserName(loggedUser);
+    if(loggedUser){
+      setUserName(loggedUser.name);
+    }
   }, []);
 
   const handleLoginClick = () => navigate('/login');

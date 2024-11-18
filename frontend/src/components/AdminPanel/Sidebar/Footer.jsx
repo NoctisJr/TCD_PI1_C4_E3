@@ -1,9 +1,12 @@
 // eslint-disable-next-line react/prop-types
-const Footer = ({ onLogoutClick }) => {
+const Footer = ({ onLogoutClick, onGoBackHome }) => {
     return (
       <div className="sidebar-footer">
-        <button onClick={onLogoutClick} className="footer-button">
+        <button onClick={onGoBackHome} className="footer-button">
           Home
+        </button>
+        <button onClick={onLogoutClick} className="footer-button">
+          Cerrar Sesión
         </button>
       </div>
     );

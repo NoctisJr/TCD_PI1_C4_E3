@@ -39,7 +39,7 @@ const LoginForm = () => {
           alert("Login exitoso!");
           sessionStorage.setItem("isAdmin", res.data.isAdmin);
           sessionStorage.setItem("isLoggedIn", "true");
-          sessionStorage.setItem("user", res.data.name);
+          sessionStorage.setItem("user", JSON.stringify({name:res.data.name, email:res.data.email}));
           navigate('/home');
         })
         .catch((error) => {
