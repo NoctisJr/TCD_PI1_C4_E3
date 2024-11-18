@@ -8,7 +8,6 @@ public interface ICategoryService {
 
     CategoryDto createCategory(CategoryDto categoryDto);
     CategoryDto getCategoryById(Long id);
-
     List<CategoryDto> getCategories();
 
 }

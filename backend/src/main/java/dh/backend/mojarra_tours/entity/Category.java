@@ -15,4 +15,5 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name; // e.g., "Hiking", "Climbing", etc.
+    private String imgUrl;
 }

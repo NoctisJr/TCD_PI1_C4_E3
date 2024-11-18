@@ -1,5 +1,6 @@
 package dh.backend.mojarra_tours.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dh.backend.mojarra_tours.dto.CategoryDto;
 import dh.backend.mojarra_tours.service.ICategoryService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -13,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -48,10 +50,23 @@ public class CategoryController {
                     )
             }
     )
-    public ResponseEntity<CategoryDto> createCategory(@RequestBody CategoryDto categoryDto) {
-        LOGGER.info("POST REQUEST CATEGORY CREATED");
-        CategoryDto savedCategory = iCategoryService.createCategory(categoryDto);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedCategory);
+    public ResponseEntity<CategoryDto> createCategory(
+            @RequestParam(value="category") String categoryString,
+            @RequestParam(value="image", required = false) MultipartFile image){
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            CategoryDto categoryDto = objectMapper.readValue(categoryString, CategoryDto.class);
+            // If there's an image, set it in the DTO
+            if (image != null && !image.isEmpty()) {
+                categoryDto.setImage(image);
+            }
+            CategoryDto savedCategory = iCategoryService.createCategory(categoryDto);
+            LOGGER.info("POST REQUEST CATEGORY CREATED");
+            return ResponseEntity.status(HttpStatus.CREATED).body(savedCategory);
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage());
+        }
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
 
     @GetMapping
