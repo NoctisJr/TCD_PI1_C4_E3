@@ -6,35 +6,20 @@ const Footer = () => {
   return (
     <footer>
         
-        <div className="foot">
-          
           <div className="logoFooter">
-            <ul>
-              <li className='imgLogo'><img src={logoFooter} alt="page-logo" style={{ maxHeight: '5vh' }} /></li>
-              <li className='copyright'>© 2024 La Ramoja</li>
-            </ul>
-          </div>
-          
-          <div className="Categorias">
-            <ul className='categorias'>
-              <li>Home</li>
-              <li>Tours</li>
-              <li>Admin</li>
-            </ul>
+              <p className='imgLogo'><img src={logoFooter} alt="page-logo" style={{ maxHeight: '5vh' }} /></p>
+              <p className='copyright'>© 2024 La Ramoja</p>
           </div>
 
-          <div className="Redes">
-              <ul className="redesSociales">
-                  <li className='instagram'><i className="fi fi-brands-instagram"></i></li>
-                  <li className='facebook'><i className="fi fi-brands-facebook"></i></li>
-                  <li className='whatsapp'><i className="fi fi-brands-whatsapp"></i></li>
-              </ul>
+          <div className="redes">
+                  <p className='instagram'><i className="fi fi-brands-instagram"></i></p>
+                  <p className='facebook'><i className="fi fi-brands-facebook"></i></p>
+                  <p className='whatsapp'><i className="fi fi-brands-whatsapp"></i></p>
           </div>
-
-        </div>
         
     </footer>
   )
 }
 
 export default Footer
+

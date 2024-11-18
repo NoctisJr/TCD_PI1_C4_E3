@@ -44,7 +44,7 @@ const LoginForm = () => {
         })
         .catch((error) => {
           console.error("Error al iniciar sesión:", error);
-          alert("Hubo un error en el inicio de sesión.");
+          alert("Credenciales invalidas, porfavor revise sus datos.");
         });
 
     } else {

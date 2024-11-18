@@ -30,6 +30,7 @@
     display: flex;
     gap: 1rem;
     padding: 10px;
+    align-items: center;
 }
 
 .nav-button {
@@ -55,6 +56,27 @@
     justify-content: space-between;
     margin: 0px 20px;
 }
+
+.user-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #c36e39;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .user-circle:hover {
+    transform: scale(1.1);
+  }
 
 /* Media queries para hacerlo responsive */
 @media (max-width: 768px) {

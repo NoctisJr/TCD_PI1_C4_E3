@@ -1,63 +1,51 @@
 footer { 
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     max-width: 100%;
-    height: 15vh;
-    padding: 10px 50px; 
+    padding: 20px 50px; 
     background-color: #282828;
     color: #ebdfc5;  
-    font-family: 'Helvetica Neue', Helvetica, Arial;
+    box-sizing: content-box;
 }
-
-.foot {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%; 
-    height: 100%; 
-    margin: 8px; 
-    
-}
-
-.foot li{list-style: none;}
-.foot ul{padding: 0px;}
-
 
 .logoFooter{
     display: flex;
-    flex-direction: column; 
-    width: 15%;
+    flex-direction: row;
+    align-items: center;
+    width: 35%; 
 }
 
-
-.Categorias{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30%;
-    width: 30%;
-
+.logoFooter p{
+    margin: 0px;
+    padding: 0px 15px;
 }
-.redesSociales {
+
+.redes{
     display: flex;
-    flex-direction: row; 
-    align-items: center;
-    justify-content: center;
-    gap: 50%; 
-    transform: scale(1.5);
-   
+    flex-direction: row-reverse;
+    transform: scale(1.2);
+    width: 35%;    
+}
+
+.redes p{
+    margin: 0px;
 }
 
 @media (max-width: 1000px) {
-    .categorias{
+    footer{
       flex-direction: column;
     }
-    .redesSociales{
+    .logoFooter{
         flex-direction: column;
+        width: 80%;
+        padding-bottom: 20px;
     }
-    .copyright{ visibility: hidden}
-    .foot { align-items: flex-start}
-    
+    .redes{
+        gap: 15px;
+        justify-content: center;
+    }
   }
 
 
