@@ -13,11 +13,17 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf().disable() // Disable CSRF protection for testing purposes
+                .csrf().disable() // Desactivar la protección CSRF para fines de prueba
                 .authorizeRequests()
-                .anyRequest().permitAll() // Allow all requests without authentication
+
+                // Permitir el acceso sin autenticación a las rutas de Swagger
+                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+
+                // Permitir todas las demás solicitudes sin autenticación (ajustar según sea necesario)
+                .anyRequest().permitAll()
+
                 .and()
-                .httpBasic().disable(); // Disable Basic Authentication
+                .httpBasic().disable(); // Desactivar la autenticación básica
         return http.build();
     }
 }

@@ -3,7 +3,6 @@ package dh.backend.mojarra_tours.mapper;
 import dh.backend.mojarra_tours.dto.TourDto;
 import dh.backend.mojarra_tours.entity.Category;
 import dh.backend.mojarra_tours.entity.Tour;
-
 public class TourMapper {
     // Receives a Tour and converts it to a TourDto
     public static TourDto mapToTourDto(Tour tour) {
