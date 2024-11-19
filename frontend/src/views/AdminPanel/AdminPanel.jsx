@@ -12,9 +12,10 @@ const AdminPanel = () => {
 
   const BASE_URL = "https://la-ramoja-production.up.railway.app"
 
+
   const handleSearch = (searchKeyWord) => {
     const keyword = searchKeyWord.trim().toLowerCase();
-    console.log(keyword)
+    console.log("Search triggered for: "+keyword)
     if(!keyword){
       setFilteredData(data);
       return;
@@ -35,6 +36,35 @@ const AdminPanel = () => {
     setFilteredData(filteredData);
   };
 
+
+  const handleDelete = async (row) => {
+    if (row.isAdmin) {
+      alert("No se permite eliminar usuarios con rol de ADMIN.");
+      return;
+    }
+      const confirmDelete = confirm("¿Está seguro que desea eliminar este registro?");
+
+      if(confirmDelete){
+        try {
+          const endpoint = `${BASE_URL}/api/${selectedSection}/${row.id}`
+          const response = await fetch(endpoint, {method: "DELETE"})
+          if (response.ok) {
+            setData((prevData) => prevData.filter((item) => item.id !== row.id));
+            setFilteredData((prevFilteredData) =>
+              prevFilteredData.filter((item) => item.id !== row.id)
+            );
+            alert("Registro eliminado.");
+          } else {
+            throw new Error("Error al eliminar el item.");
+          }
+        } catch (error) {
+          console.error(error);
+          alert("Ha ocurrido un error al tratar de eliminar el item.");
+        }
+      }
+  }
+
+
   // Fetch data based on the selected section
   useEffect(() => {
     const fetchData = async () => {
@@ -45,13 +75,13 @@ const AdminPanel = () => {
           endpoint = `${BASE_URL}/api/tours`;
           setTitle("Tours");
           break;
-        case 'users':
+        case 'user':
           endpoint = `${BASE_URL}/api/user`;
-          setTitle("Users");
+          setTitle("Usuarios");
           break;
         case 'categories':
           endpoint = `${BASE_URL}/api/categories`;
-          setTitle("Categories");
+          setTitle("Categorias");
           break;
         default:
           endpoint = `${BASE_URL}/api/tours`;
@@ -74,12 +104,14 @@ const AdminPanel = () => {
     fetchData();
   }, [selectedSection]);
 
+
+
   return (
     <div className='admin-panel'>
       <Sidebar onSectionChange={setSelectedSection} />
       <div className="content">
         <Header title={title} onSearch={handleSearch} />
-        <Table data={filteredData} />
+        <Table data={filteredData} onDelete={handleDelete}/>
       </div>
     </div>
   )

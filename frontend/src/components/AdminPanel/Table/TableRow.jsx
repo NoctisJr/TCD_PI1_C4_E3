@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-const TableRow = ({ item, headers }) => {
+const TableRow = ({ item, headers, onDelete }) => {
+
     return (
         <tr>
             {headers.map((header, index) => (
@@ -12,7 +13,7 @@ const TableRow = ({ item, headers }) => {
             </td>
             <td>
                 <button className="action-button"><span title="Editar">✏️</span></button>
-                <button className="action-button"><span title="Eliminar">❌</span></button>
+                <button className="action-button"><span title="Eliminar" onClick={() => onDelete(item)}>❌</span></button>
             </td>
         </tr>
     );
