@@ -6,6 +6,7 @@ import "./Sidebar.css";
 import { useNavigate } from 'react-router-dom';
 
 
+// eslint-disable-next-line react/prop-types
 const Sidebar = ({ onSectionChange }) => {
   const navigate = useNavigate(); 
   const {name, email} = JSON.parse(sessionStorage.getItem('user'));

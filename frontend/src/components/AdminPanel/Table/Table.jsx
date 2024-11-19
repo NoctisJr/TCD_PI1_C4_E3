@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import TableRow from './TableRow';
 import './Table.css';
-import { useState } from 'react';
 
 const Table = ({ data }) => {
   const headers = Object.keys(data[0] || {});

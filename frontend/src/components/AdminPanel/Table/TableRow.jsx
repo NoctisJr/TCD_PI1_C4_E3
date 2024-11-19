@@ -11,8 +11,8 @@ const TableRow = ({ item, headers }) => {
                 </span>
             </td>
             <td>
-                <button className="action-button">✏️</button>
-                <button className="action-button">❌</button>
+                <button className="action-button"><span title="Editar">✏️</span></button>
+                <button className="action-button"><span title="Eliminar">❌</span></button>
             </td>
         </tr>
     );

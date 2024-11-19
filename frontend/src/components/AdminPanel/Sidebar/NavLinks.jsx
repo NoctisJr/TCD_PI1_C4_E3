@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const NavLinks = ({onSectionChange}) => {
     return (
       <nav className="nav-links">
