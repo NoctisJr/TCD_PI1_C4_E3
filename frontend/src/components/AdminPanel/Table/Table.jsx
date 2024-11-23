@@ -16,7 +16,7 @@ const Table = ({ data, onDelete }) => {
                 )
               })
             }
-            <th>Estatus</th>
+            {/* <th>Estatus</th> */}
             <th>Acción</th>
           </tr>
         </thead>

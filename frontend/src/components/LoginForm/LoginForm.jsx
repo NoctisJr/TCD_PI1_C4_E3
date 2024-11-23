@@ -9,7 +9,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errores, setErrores] = useState({});
-  const apiUrl = "https://la-ramoja-production.up.railway.app/auth/login"; 
+  const apiUrl = "https://ramoja-tours.up.railway.app/auth/login"; 
   const navigate = useNavigate();
 
   const validarFormulario = () => {

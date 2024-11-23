@@ -10,7 +10,7 @@ const AdminPanel = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [title, setTitle] = useState("Tours");
 
-  const BASE_URL = "https://la-ramoja-production.up.railway.app"
+  const BASE_URL = "https://ramoja-tours.up.railway.app"
 
 
   const handleSearch = (searchKeyWord) => {
@@ -110,7 +110,7 @@ const AdminPanel = () => {
     <div className='admin-panel'>
       <Sidebar onSectionChange={setSelectedSection} />
       <div className="content">
-        <Header title={title} onSearch={handleSearch} />
+        <Header title={title} onSearch={handleSearch} selectedSection={selectedSection}/>
         <Table data={filteredData} onDelete={handleDelete}/>
       </div>
     </div>

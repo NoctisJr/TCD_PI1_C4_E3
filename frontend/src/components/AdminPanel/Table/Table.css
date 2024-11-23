@@ -42,4 +42,21 @@
     cursor: pointer;
     font-size: 16px;
   }
+
+  .admin-label {
+    font-weight: bold;
+    color: #ff5733; /* Example color */
+}
+
+.image-link {
+    margin-right: 8px; /* Add spacing between links */
+    text-decoration: underline;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.image-link:hover {
+    text-decoration: none;
+    color: #0056b3; /* Darker blue on hover */
+}
   
